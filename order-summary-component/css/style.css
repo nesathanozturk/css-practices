@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+  --btn-bg: hsl(245, 75%, 52%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("../images/pattern-background-desktop.svg") no-repeat center
+    center/cover;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+.card {
+  background-color: #fff;
+  width: 26rem;
+  border-radius: 20px;
+  -webkit-box-shadow: 5px 6px 5px 0px rgba(0, 0, 0, 0.14);
+  -moz-box-shadow: 5px 6px 5px 0px rgba(0, 0, 0, 0.14);
+  box-shadow: 5px 6px 5px 0px rgba(0, 0, 0, 0.14);
+}
+
+.card .container {
+  width: 100%;
+}
+
+.card .container .img-container {
+  width: 100%;
+}
+
+.card .container .img-container img {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.card .container .summary {
+  padding: 2rem 2rem 1.3rem 2rem;
+}
+
+.card .container .summary .summary-title {
+  color: #333;
+  padding-bottom: 0.8rem;
+}
+
+.card .container .summary .summary-title-alt {
+  color: #999;
+  letter-spacing: 0.5px;
+}
+
+.card .container .plan {
+  width: 80%;
+  background: #f8f9fd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  margin: auto;
+  padding-right: 1.2rem;
+}
+
+.card .container .plan .plan-details {
+  width: 90%;
+  display: flex;
+  gap: 1.875rem;
+  padding: 1rem;
+}
+
+.card .container .plan .plan-details .plan-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.card .container .plan .plan-details .plan-text .annual {
+  color: #000;
+  font-weight: bold;
+}
+
+.card .container .plan .plan-details .plan-text .price {
+  color: #969696;
+}
+
+.card .container .plan-change a {
+  font-size: 0.938rem;
+}
+
+.card .container .change {
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.card .container .change > button {
+  width: 90%;
+  background: var(--btn-bg);
+  border: none;
+  border-radius: 13px;
+  padding: 1rem 1.5rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 6px 5px 0px rgba(0, 0, 0, 0.14);
+  -moz-box-shadow: 0px 6px 5px 0px rgba(0, 0, 0, 0.14);
+  box-shadow: 0px 6px 5px 0px rgba(0, 0, 0, 0.14);
+}
+
+.card .container .cancel p {
+  color: #898989;
+  padding: 1rem 1rem 2.5rem 1rem;
+  font-weight: 550;
+}
+
+@media (max-width: 25.625rem) {
+  .card {
+    width: 20rem;
+  }
+
+  .card .container .plan .plan-details {
+    gap: 1.25rem;
+  }
+
+  .card .container .plan-change a {
+    font-size: 0.813rem;
+  }
+}
