@@ -1,3 +1,4 @@
 QR Code Component: https://qr-code-component-no.vercel.app/ <br />
 Order Summary: https://order-summary-no.vercel.app/ <br />
-NFT Card: https://ntf-card-no.vercel.app/
+NFT Card: https://ntf-card-no.vercel.app/ <br />
+Product Preview Card Component: https://product-preview-card-component-no.vercel.app/
