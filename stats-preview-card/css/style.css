@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;600&display=swap");
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  background: hsl(233, 47%, 7%);
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  padding: 1rem 1.5rem;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.card {
+  background: hsl(244, 38%, 16%);
+  width: min(100%, 56.25rem);
+  display: flex;
+  flex-direction: column-reverse;
+  border-radius: 0.5rem;
+}
+
+.card .card-body {
+  width: 90%;
+  margin-inline: auto;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.card .card-body h1 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+}
+
+.card .card-body .insights {
+  color: hsl(277, 64%, 61%);
+}
+
+.card .card-body .card-desc {
+  color: hsla(0, 0%, 100%, 0.75);
+  font: 300 0.9rem/1.5 "Lexend Deca", sans-serif;
+  letter-spacing: 0.6px;
+  margin-bottom: 2rem;
+}
+
+.card .card-body .statistics {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.card .card-body .statistics p {
+  color: hsl(0, 0%, 100%);
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+}
+
+.card .card-body .statistics span {
+  color: hsla(0, 0%, 100%, 0.6);
+  font-size: 0.7rem;
+  font-weight: 300;
+  letter-spacing: 0.063rem;
+  text-transform: uppercase;
+}
+
+.card .card-img {
+  background: url("/images/image-header-desktop.jpg") no-repeat center
+    center/cover;
+  width: 100%;
+  height: 13.75rem;
+  position: relative;
+}
+
+.card .card-img::after {
+  content: "";
+  background-color: #550081;
+  opacity: 0.5;
+}
+
+.card .card-img .card-color {
+  background-color: #9553d2;
+  mix-blend-mode: difference;
+  opacity: 0.1;
+}
+
+.card .card-img::after,
+.card .card-img .card-color {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.card .card-img,
+.card .card-img::after,
+.card .card-img .card-color {
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+@media (width >= 48rem) {
+  body {
+    padding: 0;
+  }
+
+  .card {
+    flex-direction: row;
+  }
+
+  .card .card-body {
+    width: 100%;
+    text-align: left;
+    padding: 4rem;
+  }
+
+  .card .card-body h1 {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+  }
+
+  .card .card-body .card-desc {
+    font-size: 0.8rem;
+    margin-bottom: 4rem;
+  }
+
+  .card .card-body .statistics {
+    flex-direction: row;
+    gap: 3rem;
+  }
+
+  .card .card-img {
+    height: auto;
+  }
+
+  .card .card-img,
+  .card .card-img::after,
+  .card .card-img .card-color {
+    border-radius: 0 0.4rem 0.4rem 0;
+  }
+}
