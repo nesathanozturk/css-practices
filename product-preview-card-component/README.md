@@ -1,4 +1,4 @@
-<img src="/images/product-preview-card.png" />
+ <img src="/images/product-preview-card.png" />
 <img src="/images/product-preview-card-mobile.png" />
 
 # Frontend Mentor - Product preview card component
