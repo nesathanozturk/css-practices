@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;700&display=swap");
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  background: url("/images/bg-pattern-bottom-mobile.svg") bottom -50px right -100px
+      no-repeat,
+    url("/images/bg-pattern-top-desktop.svg") top -10px left -100px no-repeat;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  font-family: "League Spartan", sans-serif;
+  padding: 1rem 1.5rem;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Hero */
+.hero {
+  padding: 3rem 1rem;
+}
+
+.hero .container {
+  width: min(100%, 75rem);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero .container .hero-left,
+.hero .container .hero-right {
+  width: 100%;
+  text-align: center;
+}
+
+.hero .container .hero-left h1 {
+  color: hsl(300, 43%, 22%);
+  margin-bottom: 1rem;
+  font-size: 2.8rem;
+  line-height: 1;
+}
+
+.hero .container .hero-left p {
+  color: hsl(300, 43%, 22%);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.hero .container .hero-right .card {
+  background-color: hsl(300, 24%, 96%);
+  color: hsl(300, 43%, 22%);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+}
+
+.hero .container .hero-right .card:nth-child(1) {
+  margin-right: 0;
+}
+
+.hero .container .hero-right .card:nth-child(2),
+.hero .container .hero-right .card:nth-child(3) {
+  margin: 1rem 0 0 0;
+}
+
+/* Cards */
+.grid-cards .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.grid-cards .container .card {
+  background-color: hsl(300, 43%, 22%);
+  max-width: 21.25rem;
+  padding: 2.5rem 2rem;
+  border-radius: 0.5rem;
+  color: hsl(0, 0%, 100%);
+}
+
+.grid-cards .container .card .card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1.5rem;
+}
+
+.grid-cards .container .card .card-header .card-info .job {
+  color: hsl(333, 80%, 67%);
+  font-weight: 400;
+}
+
+.grid-cards .container .card .card-header .card-image {
+  width: 2.5rem;
+  height: 2.5rem;
+  overflow: hidden;
+}
+
+.grid-cards .container .card .card-header img {
+  border-radius: 50%;
+}
+
+.grid-cards .container .card .card-header p {
+  font-size: 0.7rem;
+  line-height: 1.7;
+}
+
+.grid-cards .container .card:nth-child(2),
+.grid-cards .container .card:nth-child(3) {
+  margin-top: 0;
+}
+
+@media (width >= 57.813rem) {
+  .hero .container {
+    flex-direction: row;
+    padding: 1rem 3rem;
+  }
+
+  .hero .container .hero-left {
+    width: 40%;
+  }
+
+  .hero .container .hero-right {
+    width: 50%;
+  }
+
+  .hero .container .hero-right .card {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .hero .container .hero-right .card:nth-child(1) {
+    margin-right: 6rem;
+  }
+
+  .hero .container .hero-right .card:nth-child(2) {
+    margin: 1.4rem 3rem 0 2rem;
+  }
+
+  .hero .container .hero-right .card:nth-child(3) {
+    margin-top: 1.4rem;
+    margin-left: 5rem;
+  }
+
+  .grid-cards .container .card:nth-child(2),
+  .grid-cards .container .card:nth-child(3) {
+    margin-top: 0;
+  }
+
+  .grid-cards .container .card:nth-child(2) {
+    margin-top: 2rem;
+  }
+
+  .grid-cards .container {
+    gap: 2rem;
+  }
+
+  .grid-cards .container .card:nth-child(3) {
+    margin-top: 3.4rem;
+  }
+}
