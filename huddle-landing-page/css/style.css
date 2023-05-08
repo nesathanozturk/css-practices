@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  background: hsl(257, 40%, 49%) url("/images/bg-desktop.svg") no-repeat center
+    center/cover;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  font-family: "Open Sans", sans-serif;
+  padding: 1rem;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Nav */
+nav {
+  padding: 1rem 3rem;
+}
+
+/* Hero */
+.hero {
+  padding: 3rem;
+}
+
+.hero .container {
+  max-width: 68.75rem;
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hero .container .hero-image {
+  width: 100%;
+  margin-inline: auto;
+}
+
+.hero .container img {
+  width: 100%;
+  height: 100%;
+}
+
+.hero .container .description {
+  margin-top: 2rem;
+  width: 100%;
+  text-align: center;
+}
+
+.hero .container .description h2 {
+  font-family: "Poppins", sans-serif;
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+.hero .container .description p {
+  color: hsl(0, 0%, 85%);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.hero .container .description .btn {
+  width: 70%;
+  background: #fff;
+  font-family: "Poppins", sans-serif;
+  color: hsl(257, 40%, 49%);
+  padding: 0.7rem 0;
+  border-radius: 3.125rem;
+  font-size: 0.9rem;
+  border: none;
+  outline: none;
+  letter-spacing: 1px;
+  cursor: pointer;
+  -webkit-box-shadow: 6px 6px 13px 1px rgba(0, 0, 0, 0.28);
+  -moz-box-shadow: 6px 6px 13px 1px rgba(0, 0, 0, 0.28);
+  box-shadow: 6px 6px 13px 1px rgba(0, 0, 0, 0.28);
+  transition: all 0.3s ease-in-out;
+}
+
+.hero .container .description .btn:hover {
+  background: hsl(300, 69%, 71%);
+  color: #fff;
+}
+
+/* Footer */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.social-icons span {
+  width: 2.188rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.188rem;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.social-icons span i {
+  color: #fff;
+  transition: color 0.3s ease-in-out;
+}
+
+.social-icons span:hover,
+.social-icons span:hover i {
+  border-color: hsl(300, 69%, 71%);
+  color: hsl(300, 69%, 71%);
+}
+
+@media (width >= 55.75rem) {
+  nav {
+    padding: 2rem 3rem;
+  }
+
+  .hero .container {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .hero .container .hero-image {
+    width: 60%;
+  }
+
+  .hero .container .description {
+    width: 40%;
+    text-align: left;
+  }
+
+  .hero .container .description h2 {
+    font-size: 2.2rem;
+  }
+
+  .hero .container .description p {
+    font-size: 0.95rem;
+  }
+
+  .social-icons {
+    justify-content: flex-end;
+    margin-top: 0;
+    padding-right: 4rem;
+  }
+
+  .hero .container .description .btn {
+    width: auto;
+    padding: 0.7rem 3rem;
+  }
+}
