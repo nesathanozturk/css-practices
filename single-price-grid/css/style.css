@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  background-color: hsl(204, 43%, 93%);
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Karla", sans-serif;
+  padding: 1rem 1.5rem;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.cards {
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 3px 9px 76px -34px rgba(0, 0, 0, 0.85);
+  -moz-box-shadow: 3px 9px 76px -34px rgba(0, 0, 0, 0.85);
+  box-shadow: 3px 9px 76px -34px rgba(0, 0, 0, 0.85);
+}
+
+.cards .container {
+  max-width: 43.75rem;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.cards .container .card-community {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+  font-weight: 400;
+}
+
+.cards .container .card-community h2 {
+  color: hsl(179, 62%, 43%);
+  font-size: 1.3rem;
+  margin-bottom: 1.3rem;
+}
+
+.cards .container .card-community h3 {
+  color: hsl(71, 73%, 54%);
+  margin-bottom: 0.7rem;
+  font-size: 1rem;
+}
+
+.cards .container .card-community p {
+  color: #b4b4b4;
+  line-height: 1.8;
+  font-size: 0.9rem;
+}
+
+.cards .container .card-monthly {
+  background: #2bb4b1;
+  padding: 2rem;
+}
+
+.cards .container .card-monthly h3 {
+  color: #fff;
+  padding-bottom: 1rem;
+  white-space: nowrap;
+}
+
+.cards .container .card-monthly .price-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.cards .container .card-monthly .price {
+  color: #fff;
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+.cards .container .card-monthly .price-box span {
+  font-size: 1rem;
+  color: hsl(194, 15%, 83%);
+}
+
+.cards .container .card-monthly p {
+  color: hsl(204, 43%, 93%);
+  margin-bottom: 1.6rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+  letter-spacing: 0.5px;
+}
+
+.cards .container .card-monthly button {
+  width: 100%;
+  background: hsl(71, 73%, 54%);
+  color: #fff;
+  display: inline-block;
+  padding: 0.8rem 1rem;
+  font-weight: 600;
+  border-radius: 0.4rem;
+  border: none;
+  outline: none;
+  -webkit-box-shadow: -3px 14px 27px -10px rgba(0, 0, 0, 0.56);
+  -moz-box-shadow: -3px 14px 27px -10px rgba(0, 0, 0, 0.56);
+  box-shadow: -3px 14px 27px -10px rgba(0, 0, 0, 0.56);
+  cursor: pointer;
+}
+
+.cards .container .card-coding {
+  background: #49bebd;
+  padding: 2rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.cards .container .card-coding h3 {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.cards .container .card-coding p {
+  color: hsl(204, 43%, 93%);
+  line-height: 1.5;
+}
+
+@media (width >= 41.875rem) {
+  .cards .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cards .container .card-community {
+    padding: 3rem;
+    grid-column: span 2;
+  }
+
+  .cards .container .card-community h2 {
+    font-size: 1.5rem;
+  }
+
+  .cards .container .card-community h3 {
+    font-size: 1.2rem;
+  }
+
+  .cards .container .card-community p {
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  .cards .container .card-monthly {
+    padding: 3rem;
+    border-radius: 0 0 0 0.5rem;
+  }
+
+  .cards .container .card-coding {
+    padding: 3rem;
+    border-radius: 0 0 0.5rem 0;
+  }
+}
