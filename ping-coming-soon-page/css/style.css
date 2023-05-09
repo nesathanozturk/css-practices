@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  font-family: "Libre Franklin", sans-serif;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Header */
+header {
+  padding-top: 4rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  margin: 2.5rem 0 1rem 0;
+  font-weight: 300;
+  color: hsl(0, 0%, 59%);
+  letter-spacing: 1.5px;
+}
+
+header h1 span {
+  color: hsl(209, 33%, 12%);
+  font-weight: 700;
+}
+
+header .title-alt {
+  font-size: clamp(0.9rem, 5vw, 1.1rem);
+  color: hsl(209, 33%, 12%);
+}
+
+header form {
+  padding: 2rem;
+}
+
+header form .form-input {
+  text-align: center;
+}
+
+header form input {
+  width: 100%;
+  border-radius: 2rem;
+  border: 1px solid hsl(0, 0%, 87%);
+  outline: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 0.9rem;
+  color: hsl(0, 0%, 59%);
+  margin-right: 0.6rem;
+}
+
+header form input:invalid {
+  border: 1px solid hsl(354, 100%, 66%);
+}
+
+header form .form-input .error-message {
+  color: hsl(354, 100%, 66%);
+  display: none;
+  margin-top: 0.4rem;
+  font-size: 0.7rem;
+}
+
+header form .form-input .error-message.active {
+  display: block;
+}
+
+header form button {
+  width: 100%;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(223, 87%, 63%);
+  margin-top: 1rem;
+  padding: 0.85rem 3.2rem;
+  font-size: 0.75rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  white-space: nowrap;
+  box-shadow: 1px 1px 5px hsl(223, 87%, 63%);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+header form button:hover {
+  background-color: hsl(223, 100%, 71%);
+}
+
+header form button.active {
+  margin-bottom: 1.4rem;
+}
+
+/* Hero */
+.hero {
+  margin-block: 2.5rem;
+  padding-inline: 1.5rem;
+}
+
+.hero img {
+  width: 100%;
+  margin-inline: auto;
+}
+
+/* Footer */
+footer {
+  margin-block: 4rem;
+}
+
+footer .social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.6rem;
+}
+
+footer .social-icons span {
+  width: 2.188rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.188rem;
+  border: 1px solid #e5e5e5;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+footer .social-icons span:hover {
+  background-color: hsl(223, 87%, 63%);
+}
+
+footer .social-icons span i {
+  color: hsl(223, 87%, 63%);
+  transition: all 0.3s ease-in-out;
+}
+
+footer .social-icons span:hover i {
+  border-color: hsl(223, 87%, 63%);
+  color: #fff;
+}
+
+footer p {
+  text-align: center;
+  font-size: 0.9rem;
+  color: hsl(0, 0%, 59%);
+}
+
+@media (width >= 34.375rem) {
+  header form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header form .form-input {
+    text-align: left;
+  }
+
+  header form .form-input input {
+    width: 22.5rem;
+  }
+
+  header form .form-input .error-message {
+    margin-left: 1.5rem;
+    font-size: 0.8rem;
+  }
+
+  header form button {
+    margin-top: 0;
+    width: auto;
+    font-size: 0.8rem;
+  }
+
+  .hero {
+    padding-inline: 0;
+  }
+
+  .hero img {
+    width: 31.25rem;
+  }
+}
