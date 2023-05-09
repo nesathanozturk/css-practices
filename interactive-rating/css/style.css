@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  background: #131519;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Overpass", sans-serif;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Rating Card */
+.rating-card,
+.thx-card {
+  background: linear-gradient(
+    to bottom,
+    hsl(213, 19%, 18%),
+    hsl(210, 14%, 11%)
+  );
+  max-width: 25rem;
+  min-width: 16.875rem;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.rating-card.hide {
+  display: none;
+}
+
+.rating-card .star {
+  width: 2.813rem;
+  height: 2.813rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2d3339;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+}
+
+.rating-card .card-body h2 {
+  color: hsl(0, 0%, 100%);
+  font-weight: 500;
+  margin-bottom: 0.7rem;
+}
+
+.rating-card .card-body p {
+  color: hsl(216, 12%, 54%);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  letter-spacing: 0.4px;
+  font-weight: 500;
+}
+
+.rating-card .card-body .numbers {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  margin-top: 1.5rem;
+}
+
+.rating-card .card-body .numbers .number-btn {
+  background-color: #282e35;
+  width: 2.813rem;
+  height: 2.75rem;
+  color: hsl(216, 12%, 54%);
+  margin-bottom: 1.5rem;
+  border-radius: 50%;
+  border: none;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.rating-card .card-body .numbers .number-btn:hover {
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
+}
+
+.rating-card .card-body .numbers .number-btn.selected {
+  background-color: hsl(216, 12%, 54%);
+  color: hsl(0, 0%, 100%);
+}
+
+.rating-card .submit-btn {
+  width: 95%;
+  display: inline-block;
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
+  padding: 0.7rem 0;
+  font-size: 0.9rem;
+  border-radius: 2rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.rating-card .submit-btn:hover {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(25, 97%, 53%);
+}
+
+/* Thank You Card */
+.thx-card {
+  display: none;
+  padding: 2rem;
+  text-align: center;
+}
+
+.thx-card .thx-card-header {
+  margin-bottom: 1.5rem;
+}
+
+.thx-card .result {
+  margin-block: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.thx-card .result p {
+  background-color: #282e35;
+  width: 10.625rem;
+  padding: 0.4rem;
+  border-radius: 1rem;
+  color: hsl(25, 97%, 58%);
+  font-size: 0.85rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+.thx-card .thx-card-body h2 {
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 0.6rem;
+}
+
+.thx-card .thx-card-body p {
+  color: hsl(216, 12%, 54%);
+  font-size: 0.9rem;
+  font-weight: 200;
+  line-height: 1.5;
+}
+
+.thx-card.active {
+  display: block;
+}
