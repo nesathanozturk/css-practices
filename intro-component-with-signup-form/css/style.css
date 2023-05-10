@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  background: linear-gradient(to right, hsl(0, 100%, 74%), hsl(0, 100%, 74%));
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 2rem;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("/images/bg-intro-desktop.png") no-repeat center center/cover;
+  opacity: 1;
+  z-index: -1;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.card .container {
+  width: min(100%, 75rem);
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.card .container .card-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.card .container .card-left h1 {
+  color: #fff;
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.card .container .card-left .left-desc {
+  font-size: 0.9rem;
+  color: #e4e4e4;
+}
+
+.card .container .card-right .card-header {
+  padding: 1rem;
+  background-color: hsl(248, 32%, 49%);
+  border-radius: 0.5rem;
+  text-align: center;
+  margin-bottom: 1.4rem;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-size: 0.8rem;
+  -webkit-box-shadow: 0px 7px 0px 1px rgba(0, 0, 0, 0.14);
+  -moz-box-shadow: 0px 7px 0px 1px rgba(0, 0, 0, 0.14);
+  box-shadow: 0px 7px 0px 1px rgba(0, 0, 0, 0.14);
+}
+
+.card .container .card-right .card-header .text-gray {
+  color: hsl(255, 6%, 86%);
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.card .container .card-right form {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0px 5px 0px 1px rgba(0, 0, 0, 0.14);
+  -moz-box-shadow: 0px 5px 0px 1px rgba(0, 0, 0, 0.14);
+  box-shadow: 0px 5px 0px 1px rgba(0, 0, 0, 0.14);
+}
+
+.card .container .card-right form .form-input {
+  text-align: right;
+  position: relative;
+}
+
+.card .container .card-right form .form-input input {
+  width: 100%;
+  padding: 0.7rem 1rem 0.7rem 1.4rem;
+  border-radius: 0.4rem;
+  border: 1px solid #e4e4e4;
+  outline: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  caret-color: hsl(248, 32%, 49%);
+}
+
+.card .container .card-right form .form-input input:focus {
+  border-color: hsl(248, 32%, 49%);
+}
+
+.card .container .card-right form .form-input input:invalid {
+  border: 2px solid hsl(0, 100%, 74%);
+}
+
+.card .container .card-right form .form-input .error {
+  display: none;
+  color: hsl(0, 100%, 74%);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.6rem;
+}
+
+.card .container .card-right form .form-input .error-icon {
+  display: none;
+  position: absolute;
+  top: 12px;
+  right: 25px;
+}
+
+.card .container .card-right form .form-input .error.active,
+.card .container .card-right form .form-input .error-icon.active {
+  display: block;
+}
+
+.card .container .card-right button {
+  width: 100%;
+  background-color: hsl(154, 59%, 51%);
+  color: #fff;
+  padding: 0.7rem 1rem;
+  font-weight: 600;
+  font-size: 0.8rem;
+  border-radius: 0.3rem;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  cursor: pointer;
+  border-bottom: 3px solid hsl(154, 53%, 44%);
+  transition: all 0.3s ease-in-out;
+}
+
+.card .container .card-right button:hover {
+  opacity: 0.6;
+}
+
+.card .container .card-right .text-bottom {
+  color: hsl(257, 4%, 68%);
+  font-size: 0.6rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.card .container .card-right .text-bottom .text-red {
+  color: hsl(0, 100%, 74%);
+  font-weight: 600;
+}
+
+@media (width >= 55.625rem) {
+  body {
+    padding-inline: 6rem;
+  }
+
+  .card .container {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 2rem;
+  }
+
+  .card .container .card-left {
+    width: 50%;
+    text-align: left;
+  }
+
+  .card .container .card-left .left-desc {
+    font-size: 1rem;
+  }
+
+  .card .container .card-right {
+    width: 43%;
+  }
+
+  .card .container .card-right form input {
+    padding-left: 1.8rem;
+  }
+}
+
+@media (width <= 31.25rem) {
+  body::before {
+    background: url("/images/bg-intro-mobile.png") no-repeat center center/cover;
+  }
+}
