@@ -1,4 +1,3 @@
-// Tailwind'daki gibi projenin her yerinde kullanabileceğimiz custom renkler tanımlayabiliyoruz.
 export const theme = {
   colors: {
     header: "#ebfbff",
